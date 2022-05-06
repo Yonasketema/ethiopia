@@ -1,0 +1,113 @@
+// MEDIA QUERY MANAGER
+/*
+
+
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px + :      Big desktop
+
+
+$breakpoint arguement choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+
+ORDER: Base + typography > general layout + grid > page layout > components
+1em = 16px
+*/
+
+//1024
+
+@mixin respond($breakpoint) {
+  // @if $breakpoint == large {
+  //   @media only screen and (min-width: 1440) {
+  //     @content;
+  //   } //1800
+  // }
+  // @if $breakpoint == medium {
+  //   @media only screen and (min-width: 1024) {
+  //     @content;
+  //   } //1024
+  // }
+
+  @if $breakpoint == sll {
+    @media only screen and (max-width: 1024) {
+      @content;
+    } //1024x
+  }
+}
+
+//
+@mixin grid {
+  .grid__img--one {
+    grid-row-start: 1;
+    grid-row-end: 4;
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+
+  .grid__img--two {
+    grid-row-start: 3;
+    grid-row-end: 6;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+
+  .grid__box {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+
+  .grid__img--one {
+    grid-row-start: 1;
+    grid-row-end: 4;
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+
+  .grid__img--two {
+    grid-row-start: 3;
+    grid-row-end: 6;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+
+  .grid__box {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+}
+//   @include respond(sll) {
+//     .grid__img--one {
+//       grid-row-start: 1;
+//       grid-row-end: 4;
+//       grid-column-start: 2;
+//       grid-column-end: 3;
+//     }
+
+//     .grid__img--two {
+//       grid-row-start: 3;
+//       grid-row-end: 6;
+//       grid-column-start: 1;
+//       grid-column-end: 2;
+//     }
+
+//     .grid__box {
+//       grid-row-start: 1;
+//       grid-row-end: 3;
+//       grid-column-start: 1;
+//       grid-column-end: 2;
+//     }
+//   }
+// }
+
+// @mixin medium {
+// }

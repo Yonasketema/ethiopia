@@ -1,0 +1,40 @@
+.header-bottom_img {
+  width: 90%;
+  margin-bottom: 15rem;
+}
+.dark_img {
+  margin-bottom: 15rem;
+}
+
+.afabet {
+  border-top: 0.1rem solid rgb(47, 66, 64);
+  font-size: 12rem;
+  text-align: center;
+  letter-spacing: 3rem;
+  background-color: $color-primary;
+}
+
+.main__title {
+  color: $color-primary-light;
+
+  display: flex;
+  gap: 4rem;
+  align-items: flex-start;
+  margin: 0 auto;
+  // margin-left: 9%;
+  margin-bottom: 15rem;
+}
+.main__title__order {
+  font-size: 3rem;
+}
+.main__title__desc {
+  display: flex;
+
+  flex-direction: column;
+  font-size: 12rem;
+}
+
+.darkbg {
+  background-color: $color-primary;
+  color: $color-primary-light;
+}

@@ -1,0 +1,16 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+
+  &__primary {
+    display: flex;
+    flex-direction: column;
+    color: #38524f;
+  }
+}
+
+main {
+  overflow: hidden;
+}
