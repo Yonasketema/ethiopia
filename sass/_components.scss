@@ -1,81 +1,87 @@
-/////
-.grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: repeat(5, 1fr);
-  width: 80%;
-  margin: 0 auto;
-  height: 100%;
-  grid-column-gap: 3rem;
-  // color: #38524f;
+.desc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // min-width: 1024px;
+  margin-bottom: 21vw;
 
-  &__img--one {
-    grid-row-start: 1;
-    grid-row-end: 4;
-    grid-column-start: 1;
-    grid-column-end: 2;
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 80%;
+    gap: 7rem;
   }
-
-  &__img--two {
-    grid-row-start: 3;
-    grid-row-end: 6;
-    grid-column-start: 2;
-    grid-column-end: 3;
+  &__container > div {
+    width: 50vw;
   }
-
-  &__box {
-    padding: 0 5rem;
-    grid-row-start: 1;
-    grid-row-end: 3;
-    grid-column-start: 2;
-    grid-column-end: 3;
+  &__info {
+    margin-bottom: 7vw;
 
     display: flex;
-    gap: 5rem;
+    justify-content: space-between;
+    gap: 7rem;
 
-    &__title {
-      font-size: 3rem;
+    &--dark {
+      color: $color-heading;
     }
-    &__desc {
-      font-size: 2rem;
+    &--light {
+      color: $color-light;
+    }
+
+    & h4 {
+      font-size: 4rem;
+      margin-bottom: 5rem;
+    }
+    & p {
+      line-height: 1.6;
     }
   }
 }
 
-@media (max-width: 1024px) {
-  .grid__img--one {
-    grid-row-start: 3;
-    grid-row-end: 7;
-    grid-column-start: 1;
-    grid-column-end: 2;
-  }
-
-  .grid__img--two {
-    grid-row-start: 4;
-    grid-row-end: 7;
-    grid-column-start: 2;
-    grid-column-end: 3;
-  }
-
-  .grid__box {
-    grid-row-start: 1;
-    grid-row-end: 3;
-    grid-column-start: 1;
-    grid-column-end: 3;
-  }
-}
-.grid.even {
-  @include grid;
+.reverse {
+  flex-direction: row-reverse;
 }
 
-.explore div {
-  display: flex;
-  width: 100%;
-  justify-content: flex-end;
-  margin: 12rem;
-  gap: 4rem;
-  transform: rotate(-3deg);
-}
-.explore img {
-  width: 50rem;
+@include respond(small) {
+  .desc {
+    display: flex;
+    justify-content: center;
+
+    &__container {
+      width: 85%;
+      flex-direction: column;
+    }
+
+    &__info {
+      align-self: flex-start;
+      width: 120%;
+
+      span {
+        display: none;
+      }
+    }
+    &__container > div {
+      width: 80%;
+    }
+
+    & h4 {
+      font-size: 4rem;
+      margin-bottom: 5rem;
+    }
+    & p {
+      height: 100%;
+      line-height: 1.6;
+    }
+  }
+
+  .small-flex {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+  }
+  #left {
+    align-self: flex-end;
+  }
 }

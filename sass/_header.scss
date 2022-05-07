@@ -1,14 +1,19 @@
 .header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 80vh;
+  width: 85%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 
   &__primary {
     display: flex;
     flex-direction: column;
-    color: #38524f;
+    color: $color-heading;
   }
+}
+header {
+  height: 80vh;
+  margin-bottom: 3rem;
 }
 
 main {

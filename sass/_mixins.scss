@@ -34,8 +34,8 @@ ORDER: Base + typography > general layout + grid > page layout > components
   //   } //1024
   // }
 
-  @if $breakpoint == sll {
-    @media only screen and (max-width: 1024) {
+  @if $breakpoint == small {
+    @media only screen and (max-width: 1024px) {
       @content;
     } //1024x
   }

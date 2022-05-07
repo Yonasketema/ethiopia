@@ -1,6 +1,10 @@
 .header-bottom_img {
   width: 90%;
   margin-bottom: 15rem;
+
+  @include respond(small) {
+    width: 100%;
+  }
 }
 .dark_img {
   margin-bottom: 15rem;
@@ -11,30 +15,43 @@
   font-size: 12rem;
   text-align: center;
   letter-spacing: 3rem;
-  background-color: $color-primary;
+  background-color: $color-dark;
 }
 
 .main__title {
-  color: $color-primary-light;
+  color: $color-light;
 
   display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 90%;
   gap: 4rem;
   align-items: flex-start;
   margin: 0 auto;
   // margin-left: 9%;
   margin-bottom: 15rem;
+
+  @include respond(small) {
+    .main__title__order {
+      display: none;
+    }
+  }
 }
 .main__title__order {
   font-size: 3rem;
 }
 .main__title__desc {
   display: flex;
-
   flex-direction: column;
-  font-size: 12rem;
+  letter-spacing: 1.6rem;
+
+  font-size: 16rem;
+  @include respond(small) {
+    font-size: 9rem;
+  }
 }
 
 .darkbg {
-  background-color: $color-primary;
-  color: $color-primary-light;
+  background-color: $color-dark;
+  color: $color-light;
 }
