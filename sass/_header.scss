@@ -1,0 +1,22 @@
+.header {
+  height: 80vh;
+  width: 85%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  clear: both;
+
+  &__primary {
+    display: flex;
+    flex-direction: column;
+    color: $color-heading;
+  }
+}
+header {
+  height: 80vh;
+  margin-bottom: 3rem;
+}
+
+main {
+  overflow: hidden;
+}

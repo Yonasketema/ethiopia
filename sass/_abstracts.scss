@@ -1,0 +1,14 @@
+$color-heading: #38524f;
+$color-dark: rgb(3, 31, 28);
+$color-light: #d9e1cc;
+
+$background-color: #fff;
+
+.img {
+  transform: rotate(5deg);
+  transition: all 2s cubic-bezier(0.26, 1.04, 0.54, 1) 0s;
+  scroll-behavior: smooth;
+}
+.rotate {
+  transform: rotate(0deg);
+}

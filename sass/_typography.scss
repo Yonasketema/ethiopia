@@ -1,0 +1,28 @@
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 2.1rem;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h4 {
+  font-family: "Playfair Display", serif;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.nav {
+  font-family: "Playfair Display", serif;
+  font-size: 1.7rem;
+  font-weight: 600;
+  letter-spacing: 0.19rem;
+  margin-bottom: 5rem;
+}
+.header__primary {
+  font-size: calc(9vw + 1rem);
+  line-height: 1;
+
+  letter-spacing: 0.7rem;
+}

@@ -1,0 +1,289 @@
+.img {
+  transform: rotate(5deg);
+  transition: all 2s cubic-bezier(0.26, 1.04, 0.54, 1) 0s;
+  scroll-behavior: smooth; }
+
+.rotate {
+  transform: rotate(0deg); }
+
+/*
+
+
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px + :      Big desktop
+
+
+$breakpoint arguement choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+
+ORDER: Base + typography > general layout + grid > page layout > components
+1em = 16px
+*/
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  background-color: #ebeae4; }
+
+ul {
+  list-style: none; }
+
+img {
+  width: 100%;
+  margin: 0;
+  display: block; }
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 2.1rem;
+  line-height: 1.6; }
+
+h1,
+h2,
+h4 {
+  font-family: "Playfair Display", serif;
+  font-weight: 900;
+  line-height: 1; }
+
+.nav {
+  font-family: "Playfair Display", serif;
+  font-size: 1.7rem;
+  font-weight: 600;
+  letter-spacing: 0.19rem;
+  margin-bottom: 5rem; }
+
+.header__primary {
+  font-size: calc(9vw + 1rem);
+  line-height: 1;
+  letter-spacing: 0.7rem; }
+
+.navigation {
+  overflow: hidden; }
+  .navigation_check {
+    display: none; }
+    .navigation_check:checked ~ .navigation_ui {
+      transform: translateY(0); }
+    .navigation_check:checked ~ .navigation_btn {
+      background-color: #031f1c;
+      color: #d9e1cc; }
+  .navigation_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    height: 7rem;
+    width: 7rem;
+    position: fixed;
+    top: 6rem;
+    right: 6rem;
+    border-radius: 50%;
+    z-index: 2000; }
+  .navigation_ui {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1500;
+    transform: translateY(-100%);
+    background-image: linear-gradient(to right, rgba(3, 32, 30, 0.7), rgba(56, 82, 79, 0.682)), url("./img/lesly-derksen-v1pcGRXSmW8-unsplash.webp");
+    background-size: cover;
+    background-position: top;
+    overflow: hidden;
+    transition: all 0.8s; }
+  .navigation_list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; }
+  .navigation_item {
+    font-size: 3rem;
+    font-weight: 300;
+    padding: 1rem 2rem;
+    color: #fff;
+    text-transform: uppercase;
+    background-size: 100%; }
+    .navigation_item:hover {
+      background-color: darkolivegreen; }
+
+.header {
+  height: 80vh;
+  width: 85%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  clear: both; }
+  .header__primary {
+    display: flex;
+    flex-direction: column;
+    color: #38524f; }
+
+header {
+  height: 80vh;
+  margin-bottom: 3rem; }
+
+main {
+  overflow: hidden; }
+
+.desc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 21vw; }
+  .desc__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 80%;
+    gap: 7rem; }
+  .desc__container > div {
+    width: 50vw; }
+  .desc__info {
+    margin-bottom: 7vw;
+    display: flex;
+    justify-content: space-between;
+    gap: 7rem; }
+    .desc__info--dark {
+      color: #38524f; }
+    .desc__info--light {
+      color: #d9e1cc; }
+    .desc__info h4 {
+      font-size: 4rem;
+      margin-bottom: 5rem; }
+    .desc__info p {
+      line-height: 1.6; }
+
+.reverse {
+  flex-direction: row-reverse; }
+
+@media only screen and (max-width: 1024px) {
+  .desc {
+    display: flex;
+    justify-content: center; }
+    .desc__container {
+      width: 85%;
+      flex-direction: column; }
+    .desc__info {
+      align-self: flex-start;
+      width: 120%; }
+      .desc__info span {
+        display: none; }
+    .desc__container > div {
+      width: 80%; }
+    .desc h4 {
+      font-size: 4rem;
+      margin-bottom: 5rem; }
+    .desc p {
+      height: 100%;
+      line-height: 1.6; }
+  .small-flex {
+    display: flex;
+    flex-direction: column;
+    width: 100%; }
+  #left {
+    align-self: flex-end; } }
+
+.header-bottom_img {
+  width: 90%;
+  margin-bottom: 15rem; }
+  @media only screen and (max-width: 1024px) {
+    .header-bottom_img {
+      width: 100%; } }
+
+.dark_img {
+  margin-bottom: 15rem; }
+
+.letters {
+  position: relative;
+  margin: 0 auto;
+  margin-bottom: 25rem;
+  display: flex;
+  justify-content: center;
+  overflow: hidden; }
+  .letters__img {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem; }
+  .letters__img div:nth-child(even) {
+    align-self: flex-end; }
+  .letters__box {
+    width: 70%;
+    border-top: 1rem solid #2f4240;
+    background-color: rgba(47, 66, 64, 0.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 12rem; }
+
+.main__title {
+  color: #d9e1cc;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 90%;
+  gap: 4rem;
+  align-items: flex-start;
+  margin: 0 auto;
+  margin-bottom: 15rem; }
+  @media only screen and (max-width: 1024px) {
+    .main__title .main__title__order {
+      display: none; } }
+
+.main__title__order {
+  font-size: 3rem; }
+
+.main__title__desc {
+  display: flex;
+  flex-direction: column;
+  letter-spacing: 1.6rem;
+  font-size: 16rem; }
+  @media only screen and (max-width: 1024px) {
+    .main__title__desc {
+      font-size: 9rem; } }
+
+.darkbg {
+  background-color: #031f1c;
+  color: #d9e1cc; }
+
+.scroll-img {
+  transition: all 0.4s linear;
+  overflow: hidden; }
+
+.explore {
+  display: flex;
+  justify-content: flex-end;
+  gap: 5rem;
+  margin-bottom: 5rem;
+  transform: translateX(7%);
+  position: relative; }
+  .explore__text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 4rem;
+    font-weight: 400; }
+  .explore__img {
+    width: 42%;
+    transform: rotate(-2deg); }

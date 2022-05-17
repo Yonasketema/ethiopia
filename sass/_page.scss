@@ -1,0 +1,112 @@
+.header-bottom_img {
+  width: 90%;
+  margin-bottom: 15rem;
+
+  @include respond(small) {
+    width: 100%;
+  }
+}
+.dark_img {
+  margin-bottom: 15rem;
+}
+
+.letters {
+  position: relative;
+  margin: 0 auto;
+  margin-bottom: 25rem;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  &__img {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+  }
+
+  &__img div:nth-child(even) {
+    align-self: flex-end;
+  }
+
+  &__box {
+    width: 70%;
+    border-top: 1rem solid rgb(47, 66, 64);
+
+    background-color: rgba(47, 66, 64, 0.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 12rem;
+  }
+}
+
+.main__title {
+  color: $color-light;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 90%;
+  gap: 4rem;
+  align-items: flex-start;
+  margin: 0 auto;
+  // margin-left: 9%;
+  margin-bottom: 15rem;
+
+  @include respond(small) {
+    .main__title__order {
+      display: none;
+    }
+  }
+}
+.main__title__order {
+  font-size: 3rem;
+}
+.main__title__desc {
+  display: flex;
+  flex-direction: column;
+  letter-spacing: 1.6rem;
+
+  font-size: 16rem;
+  @include respond(small) {
+    font-size: 9rem;
+  }
+}
+
+.darkbg {
+  background-color: $color-dark;
+  color: $color-light;
+}
+
+.scroll-img {
+  transition: all 0.4s linear;
+  overflow: hidden;
+}
+
+.explore {
+  display: flex;
+  justify-content: flex-end;
+  gap: 5rem;
+  margin-bottom: 5rem;
+  transform: translateX(7%);
+  position: relative;
+
+  &__text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 4rem;
+    font-weight: 400;
+  }
+
+  &__img {
+    width: 42%;
+
+    transform: rotate(-2deg);
+  }
+}

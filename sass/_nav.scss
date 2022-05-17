@@ -1,0 +1,67 @@
+.navigation {
+  overflow: hidden;
+
+  &_check {
+    display: none;
+
+    &:checked ~ .navigation_ui {
+      transform: translateY(0);
+    }
+    &:checked ~ .navigation_btn {
+      background-color: $color-dark;
+      color: $color-light;
+    }
+  }
+  &_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    height: 7rem;
+    width: 7rem;
+    position: fixed;
+    top: 6rem;
+    right: 6rem;
+    border-radius: 50%;
+    z-index: 2000;
+  }
+
+  &_ui {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1500;
+    transform: translateY(-100%);
+    background-image: linear-gradient(
+        to right,
+        hsla(174, 82%, 7%, 0.7),
+        rgba(56, 82, 79, 0.682)
+      ),
+      url("./img/lesly-derksen-v1pcGRXSmW8-unsplash.webp");
+    background-size: cover;
+    background-position: top;
+
+    overflow: hidden;
+    transition: all 0.8s;
+  }
+  &_list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  &_item {
+    font-size: 3rem;
+    font-weight: 300;
+    padding: 1rem 2rem;
+    color: #fff;
+    text-transform: uppercase;
+    background-size: 100%;
+    &:hover {
+      background-color: darkolivegreen;
+    }
+  }
+}

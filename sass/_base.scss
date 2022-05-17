@@ -1,0 +1,46 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// - phone
+// - tab-port
+// - tab-land
+// - big-desktop
+html {
+  font-size: 62.5%;
+
+  @include respond(big-desktop) {
+    font-size: 75%; //1rem =12
+  }
+
+  @include respond(tab-land) {
+    //900 - 1200px:   Tablet landscape
+    font-size: 56.25%; //1rem = 9px ,
+  }
+
+  @include respond(tab-port) {
+    //600 - 900px:    Tablet portrait
+    font-size: 50%; // 1rem = 8px , 8/16 =50%
+  }
+
+  @include respond(phone) {
+    //0 - 600px:
+    font-size: 50%;
+  }
+}
+
+body {
+  background-color: rgb(235, 234, 228);
+}
+ul {
+  list-style: none;
+}
+img {
+  width: 100%;
+  margin: 0;
+  display: block;
+}
