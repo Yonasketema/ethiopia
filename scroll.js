@@ -1,38 +1,37 @@
 const boxes = document.querySelectorAll(".img");
 const scrollimgs = document.querySelectorAll(".scroll-img");
 
-// window.addEventListener("scroll", checkBox);
-// let initialTranslation = 0;
+window.addEventListener("scroll", checkBox);
+let initialTranslation = 0;
 
-// function checkBox() {
-//   const triggerBottom = window.innerHeight;
-//   const scrollTop = window.scrollY;
+function checkBox() {
+  const triggerBottom = window.innerHeight;
+  const scrollTop = window.scrollY;
 
-//   boxes.forEach((box) => {
-//     const boxTop = box.getBoundingClientRect().top;
+  boxes.forEach((box) => {
+    const boxTop = box.getBoundingClientRect().top;
 
-//     if (boxTop < triggerBottom) {
-//       box.classList.add("rotate");
-//     } else {
-//       box.classList.remove("rotate");
-//     }
-//   });
+    if (boxTop < triggerBottom) {
+      box.classList.add("rotate");
+    } else {
+      box.classList.remove("rotate");
+    }
+  });
 
-//   scrollimgs.forEach((img) => {
-//     const boxTop = img.getBoundingClientRect().top;
+  scrollimgs.forEach((img) => {
+    const boxTop = img.getBoundingClientRect().top;
 
-//     if (boxTop) {
-//       img.style.transform = `translateY(-${
-//         initialTranslation + scrollTop / 100
-//       }%) `;
-//     } else {
-//       img.style.transform = `translateY(${
-//         initialTranslation + scrollTop / 100
-//       }%) `;
-//     }
-//   });
-
-// }
+    if (boxTop) {
+      img.style.transform = `translateY(-${
+        initialTranslation + scrollTop / 100
+      }%) `;
+    } else {
+      img.style.transform = `translateY(${
+        initialTranslation + scrollTop / 100
+      }%) `;
+    }
+  });
+}
 
 const cards = document.querySelectorAll(".scroll-img");
 const letters = document.querySelector(".letters");
