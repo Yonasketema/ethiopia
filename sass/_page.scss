@@ -6,40 +6,33 @@
     width: 100%;
   }
 }
+.parallax {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .dark_img {
-  margin-bottom: 15rem;
+  background-image: url("./img/daniele-levis-pelusi-kUzXgJ3-ThA-unsplash.jpg");
+  height: 110vh;
+  width: 100%;
+}
+.dark_imgend {
+  background-image: url("./img/marc-szeglat-Rj21YHC1CIY-unsplash.jpg");
+  height: 110vh;
+  width: 100%;
+  margin-bottom: 13rem;
 }
 
 .letters {
-  position: relative;
   margin: 0 auto;
   margin-bottom: 25rem;
   display: flex;
   justify-content: center;
   overflow: hidden;
-  &__img {
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    gap: 5rem;
-  }
-
-  &__img div:nth-child(even) {
-    align-self: flex-end;
-  }
 
   &__box {
-    width: 70%;
-    border-top: 1rem solid rgb(47, 66, 64);
-
-    background-color: rgba(47, 66, 64, 0.3);
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
-    height: 100%;
+    border-top: 0.1rem solid rgb(47, 66, 64);
     text-align: center;
-    font-size: 12rem;
   }
 }
 
@@ -53,7 +46,6 @@
   gap: 4rem;
   align-items: flex-start;
   margin: 0 auto;
-  // margin-left: 9%;
   margin-bottom: 15rem;
 
   @include respond(small) {
@@ -62,23 +54,17 @@
     }
   }
 }
-.main__title__order {
-  font-size: 3rem;
-}
+
 .main__title__desc {
   display: flex;
   flex-direction: column;
-  letter-spacing: 1.6rem;
-
-  font-size: 16rem;
-  @include respond(small) {
-    font-size: 9rem;
-  }
 }
 
 .darkbg {
   background-color: $color-dark;
   color: $color-light;
+  padding-bottom: 0.7rem;
+  box-sizing: border-box;
 }
 
 .scroll-img {
@@ -86,27 +72,41 @@
   overflow: hidden;
 }
 
-.explore {
+///@explore
+
+.explore_conti {
+  transform: translateX(10%);
   display: flex;
   justify-content: flex-end;
   gap: 5rem;
-  margin-bottom: 5rem;
-  transform: translateX(7%);
+  width: 60%;
+  margin-bottom: 13rem;
+}
+
+.explore {
+  position: relative;
+  width: 45%;
+  max-width: 72rem;
+  overflow: hidden;
+  transform: rotate(-2deg);
   position: relative;
 
-  &__text {
+  &_text {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    color: #fff;
-    font-size: 4rem;
-    font-weight: 400;
-  }
+    transform: translate(-50%, -50%) rotate(-2deg);
 
-  &__img {
-    width: 42%;
-
-    transform: rotate(-2deg);
+    z-index: 1000;
+    text-align: center;
   }
+}
+.explore img {
+  width: 100%;
+  height: 100%;
+  transition: all 2s ease;
+}
+
+.explore img:hover {
+  transform: scale(1.1);
 }

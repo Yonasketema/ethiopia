@@ -15,7 +15,7 @@ window.addEventListener("scroll", () => {
           ? parallax.offsetTop
           : parallax.offsetTop - window.innerHeight / 2;
       const oldMax = oldMin + parallax.offsetHeight;
-      const yPosition = calculateRangeValue(oldMin, oldMax, 0, -50, scrollTop);
+      const yPosition = calculateRangeValue(oldMin, oldMax, 0, -200, scrollTop);
       parallax.style.backgroundPosition = `center ${yPosition}px`;
     }
   });

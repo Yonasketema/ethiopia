@@ -6,26 +6,6 @@
 .rotate {
   transform: rotate(0deg); }
 
-/*
-
-
-0 - 600px:      Phone
-600 - 900px:    Tablet portrait
-900 - 1200px:   Tablet landscape
-[1200 - 1800] is where our normal styles apply
-1800px + :      Big desktop
-
-
-$breakpoint arguement choices:
-- phone
-- tab-port
-- tab-land
-- big-desktop
-
-
-ORDER: Base + typography > general layout + grid > page layout > components
-1em = 16px
-*/
 *,
 ::before,
 ::after {
@@ -35,6 +15,9 @@ ORDER: Base + typography > general layout + grid > page layout > components
 
 html {
   font-size: 62.5%; }
+  @media only screen and (max-width: 64em) {
+    html {
+      font-size: 56.25%; } }
 
 body {
   background-color: #ebeae4; }
@@ -68,9 +51,30 @@ h4 {
   margin-bottom: 5rem; }
 
 .header__primary {
-  font-size: calc(9vw + 1rem);
+  font-size: 9vw;
   line-height: 1;
   letter-spacing: 0.7rem; }
+  @media only screen and (max-width: 64em) {
+    .header__primary {
+      letter-spacing: 0.1rem; } }
+
+.main__title__order {
+  font-size: 3rem; }
+
+.main__title__desc {
+  letter-spacing: 0.8rem;
+  font-size: clamp(2rem, 20vw, 16rem); }
+
+.letters__box p {
+  font-size: calc(9vw + 1rem);
+  letter-spacing: 1.5rem; }
+
+.explore_text {
+  font-size: 4rem;
+  font-weight: 600;
+  color: #fff;
+  min-width: 70%;
+  max-width: 70%; }
 
 .navigation {
   overflow: hidden; }
@@ -93,6 +97,13 @@ h4 {
     right: 6rem;
     border-radius: 50%;
     z-index: 2000; }
+    @media only screen and (max-width: 64em) {
+      .navigation_btn {
+        font-size: 1.2rem;
+        height: 4rem;
+        width: 4rem;
+        top: 3rem;
+        right: 3rem; } }
   .navigation_ui {
     height: 100vh;
     width: 100%;
@@ -101,7 +112,7 @@ h4 {
     right: 0;
     z-index: 1500;
     transform: translateY(-100%);
-    background-image: linear-gradient(to right, rgba(3, 32, 30, 0.7), rgba(56, 82, 79, 0.682)), url("./img/lesly-derksen-v1pcGRXSmW8-unsplash.webp");
+    background-image: linear-gradient(to right, rgba(3, 32, 30, 0.7), rgba(56, 82, 79, 0.682)), url("./img/yohannes-minas-YPLosSc3w6A-unsplash.jpg");
     background-size: cover;
     background-position: top;
     overflow: hidden;
@@ -123,12 +134,11 @@ h4 {
       background-color: darkolivegreen; }
 
 .header {
-  height: 80vh;
+  height: 35vw;
   width: 85%;
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  clear: both; }
+  justify-content: center;
+  align-items: center; }
   .header__primary {
     display: flex;
     flex-direction: column;
@@ -172,7 +182,7 @@ main {
 .reverse {
   flex-direction: row-reverse; }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 64em) {
   .desc {
     display: flex;
     justify-content: center; }
@@ -187,7 +197,7 @@ main {
     .desc__container > div {
       width: 80%; }
     .desc h4 {
-      font-size: 4rem;
+      font-size: 3rem;
       margin-bottom: 5rem; }
     .desc p {
       height: 100%;
@@ -202,38 +212,35 @@ main {
 .header-bottom_img {
   width: 90%;
   margin-bottom: 15rem; }
-  @media only screen and (max-width: 1024px) {
+  @media only screen and (max-width: 64em) {
     .header-bottom_img {
       width: 100%; } }
 
+.parallax {
+  background-repeat: no-repeat;
+  background-size: cover; }
+
 .dark_img {
-  margin-bottom: 15rem; }
+  background-image: url("./img/daniele-levis-pelusi-kUzXgJ3-ThA-unsplash.jpg");
+  height: 110vh;
+  width: 100%; }
+
+.dark_imgend {
+  background-image: url("./img/marc-szeglat-Rj21YHC1CIY-unsplash.jpg");
+  height: 110vh;
+  width: 100%;
+  margin-bottom: 13rem; }
 
 .letters {
-  position: relative;
   margin: 0 auto;
   margin-bottom: 25rem;
   display: flex;
   justify-content: center;
   overflow: hidden; }
-  .letters__img {
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    gap: 5rem; }
-  .letters__img div:nth-child(even) {
-    align-self: flex-end; }
   .letters__box {
-    width: 70%;
-    border-top: 1rem solid #2f4240;
-    background-color: rgba(47, 66, 64, 0.3);
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
-    height: 100%;
-    text-align: center;
-    font-size: 12rem; }
+    border-top: 0.1rem solid #2f4240;
+    text-align: center; }
 
 .main__title {
   color: #d9e1cc;
@@ -245,45 +252,51 @@ main {
   align-items: flex-start;
   margin: 0 auto;
   margin-bottom: 15rem; }
-  @media only screen and (max-width: 1024px) {
+  @media only screen and (max-width: 64em) {
     .main__title .main__title__order {
       display: none; } }
 
-.main__title__order {
-  font-size: 3rem; }
-
 .main__title__desc {
   display: flex;
-  flex-direction: column;
-  letter-spacing: 1.6rem;
-  font-size: 16rem; }
-  @media only screen and (max-width: 1024px) {
-    .main__title__desc {
-      font-size: 9rem; } }
+  flex-direction: column; }
 
 .darkbg {
   background-color: #031f1c;
-  color: #d9e1cc; }
+  color: #d9e1cc;
+  padding-bottom: 0.7rem;
+  box-sizing: border-box; }
 
 .scroll-img {
   transition: all 0.4s linear;
   overflow: hidden; }
 
-.explore {
+.explore_conti {
+  transform: translateX(10%);
   display: flex;
   justify-content: flex-end;
   gap: 5rem;
-  margin-bottom: 5rem;
-  transform: translateX(7%);
+  width: 60%;
+  margin-bottom: 13rem; }
+
+.explore {
+  position: relative;
+  width: 45%;
+  max-width: 72rem;
+  overflow: hidden;
+  transform: rotate(-2deg);
   position: relative; }
-  .explore__text {
+  .explore_text {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    color: #fff;
-    font-size: 4rem;
-    font-weight: 400; }
-  .explore__img {
-    width: 42%;
-    transform: rotate(-2deg); }
+    transform: translate(-50%, -50%) rotate(-2deg);
+    z-index: 1000;
+    text-align: center; }
+
+.explore img {
+  width: 100%;
+  height: 100%;
+  transition: all 2s ease; }
+
+.explore img:hover {
+  transform: scale(1.1); }

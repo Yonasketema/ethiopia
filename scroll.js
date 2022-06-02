@@ -32,33 +32,3 @@ function checkBox() {
     }
   });
 }
-
-const cards = document.querySelectorAll(".scroll-img");
-const letters = document.querySelector(".letters");
-
-let scrollAmount = 10;
-let oldScrollAmount = 0;
-window.addEventListener("scroll", () => {
-  const triggerBottom = window.innerHeight;
-  const scrollTop = window.scrollY;
-  const boxTop = letters.getBoundingClientRect().top;
-  const boxBottom = letters.getBoundingClientRect().bottom;
-
-  if (boxTop < triggerBottom) {
-    if (boxBottom < triggerBottom) {
-      return scrollAmount * 0.09;
-    }
-    cards.forEach((card) => {
-      if (scrollTop + window.innerHeight > card.offsetTop) {
-        if (scrollTop > oldScrollAmount) {
-          scrollAmount--;
-        } else if (scrollTop < oldScrollAmount) {
-          scrollAmount++;
-        }
-
-        card.style.transform = `translateY(${scrollAmount * 0.09}%)`;
-      }
-    });
-    oldScrollAmount = scrollTop;
-  }
-});

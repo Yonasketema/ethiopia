@@ -21,8 +21,32 @@ h4 {
   margin-bottom: 5rem;
 }
 .header__primary {
-  font-size: calc(9vw + 1rem);
+  font-size: 9vw;
   line-height: 1;
 
   letter-spacing: 0.7rem;
+  @include respond(small) {
+    letter-spacing: 0.1rem;
+  }
+}
+
+.main__title__order {
+  font-size: 3rem;
+}
+.main__title__desc {
+  letter-spacing: 0.8rem;
+
+  font-size: clamp(2rem, 20vw, 16rem);
+}
+
+.letters__box p {
+  font-size: calc(9vw + 1rem);
+  letter-spacing: 1.5rem;
+}
+.explore_text {
+  font-size: 4rem;
+  font-weight: 600;
+  color: #fff;
+  min-width: 70%;
+  max-width: 70%;
 }

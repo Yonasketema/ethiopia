@@ -24,6 +24,14 @@
     right: 6rem;
     border-radius: 50%;
     z-index: 2000;
+
+    @include respond(small) {
+      font-size: 1.2rem;
+      height: 4rem;
+      width: 4rem;
+      top: 3rem;
+      right: 3rem;
+    }
   }
 
   &_ui {
@@ -39,7 +47,7 @@
         hsla(174, 82%, 7%, 0.7),
         rgba(56, 82, 79, 0.682)
       ),
-      url("./img/lesly-derksen-v1pcGRXSmW8-unsplash.webp");
+      url("./img/yohannes-minas-YPLosSc3w6A-unsplash.jpg");
     background-size: cover;
     background-position: top;
 
