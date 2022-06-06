@@ -25,3 +25,19 @@ img {
   margin: 0;
   display: block;
 }
+
+@keyframes fide {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+.anime {
+  animation: fide 4s;
+  display: block;
+}

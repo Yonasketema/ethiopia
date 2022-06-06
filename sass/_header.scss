@@ -9,8 +9,10 @@
     display: flex;
     flex-direction: column;
     color: $color-heading;
+    animation: fide both 1s;
   }
 }
+
 header {
   height: 80vh;
   margin-bottom: 3rem;

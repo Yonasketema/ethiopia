@@ -30,6 +30,18 @@ img {
   margin: 0;
   display: block; }
 
+@keyframes fide {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+.anime {
+  animation: fide 4s;
+  display: block; }
+
 body {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
@@ -142,7 +154,8 @@ h4 {
   .header__primary {
     display: flex;
     flex-direction: column;
-    color: #38524f; }
+    color: #38524f;
+    animation: fide both 1s; }
 
 header {
   height: 80vh;
